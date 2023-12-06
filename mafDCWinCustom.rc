@@ -1,0 +1,77 @@
+/*	XOP-specific resources for mafDC on Windows
+
+	This file is compiled by the resource compiler and creates XOP-specific
+	resources that IGOR looks for in an XOP module.
+*/
+
+#include "XOPResources.h"			// Defines XOP-specific symbols.
+
+1100 STR#							// Custom error messages.
+BEGIN
+	"mafDC error: Requires Igor Pro 5.0 or later.\0",
+	"mafDC error: Illegal rate specified\0",
+	"mafDC error: Couldn't create task\0",
+	"mafDC error: Couldn't create analog-in task\0",
+	"mafDC error: Couldn't configure analog-in task\0",
+	"mafDC error: Couldn't create analog-out task\0",
+	"mafDC error: Couldn't configure analog-out task\0",
+	"mafDC error: Couldn't start analog-out task\0",
+	"mafDC error: Couldn't start analog-in task\0",
+	"mafDC error: DAQ read error\0",
+	"mafDC error: DAQ write error\0",
+	"mafDC error: Trouble setting overwrite\0",
+	"mafDC error: Couldn't locate A/D gain info (mafITC missing?)\0",
+	"mafDC error: Couldn't locate A/D gain info (unfamiliar version of mafITC?)\0",
+	"mafDC error: Couldn't retrieve A/D gain info for some reason\0",
+	"mafDC error: Couldn't locate D/A gain info (mafITC missing?)\0",
+	"mafDC error: Couldn't locate D/A gain info (unfamiliar version of mafITC?)\0",
+	"mafDC error: Couldn't retrieve D/A gain info for some reason\0",
+	"mafDC error: Couldn't locate hardware A/D gain info (mafITC missing?)\0",
+	"mafDC error: Couldn't locate hardware A/D gain info (unfamiliar version of mafITC?)\0",
+	"mafDC error: Couldn't retrieve hardware A/D gain info for some reason\0",
+	"mafDC error: Couldn't set read relative to most recent sample\0",
+	"mafDC error: Couldn't set offset for read operation\0",
+	"mafDC error: Invalid alpha-h wave\0",
+	"mafDC error: Invalid beta-h wave\0",
+	"mafDC error: Invalid alpha-m wave\0",
+	"mafDC error: Invalid beta-m wave\0",
+	"mafDC error: Channel conflict\0",
+	"mafDC error: Can't resolve channel type\0",
+	"mafDC error: No high-performance counter available on this machine\0",
+	"mafDC error: Markov transitions wave is invalid\0",
+	"mafDC error: Markov conductances wave is invalid\0",
+	"mafDC error: Markov transitions wave not 2-D\0",
+	"mafDC error: Markov transitions wave not square nxn matrix\0",
+	"mafDC error: Number of states differ between Markov transitions and conductance waves\0",
+	"mafDC error: Microscopic transition wave invalid\0",
+	"mafDC error: Markov model caused illegal state value\0",
+	"mafDC error: Couldn't determine terminal configuration of A/D (mafITC missing?)\0",
+	"mafDC error: Couldn't determine terminal configuration of A/D (unfamiliar version of mafITC?)\0",
+	"mafDC error: Couldn't retrieve terminal configuration of A/D for some reason\0",
+	"mafDC error: Markov model has too many states (max = 20)\0",
+	0,								// NOTE: 0 required to terminate the resource.
+END
+
+1101 STR#							// Misc strings read by Igor.
+BEGIN
+	"-1\0",							// -1 means we don't want to add a menu item.
+	"No Menu Item\0",				// Igor ignores item 2 because item 1 is -1.
+	"mafDC Help.ihf\0",			// Name of XOP's help file.
+	0,								// NOTE: 0 required to terminate the resource.
+END
+
+1100 XOPI							// XOPI - Describes general XOP properties to IGOR. 
+BEGIN
+	XOP_VERSION,					// Version number of host XOP system.
+	DEV_SYS_CODE,					// Code for development system used to make XOP.
+	0,								// Obsolete - set to zero.
+	0,								// Obsolete - set to zero.
+	XOP_TOOLKIT_VERSION				// XOP Toolkit version.
+END
+
+1100 XOPC							// Describes functions added by XOP to IGOR.
+BEGIN
+	"mafDC\0",				// operation name.
+	XOPOp | compilableOp | ioOp,	// operation category,
+	0,								// NOTE: 0 required to terminate the resource.
+END
